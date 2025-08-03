@@ -42,7 +42,4 @@ class HTMLNode:
         return output
     
     def __repr__(self):
-        output = f"TAG: {self.tag} - VALUE: {self.value} -"
-        output += f" CHILDREN: {self.children} -"
-        output += f" PROPERTIES: {self.properties}"
-        return output
+        return f"HTMLNode(tag: {self.tag}, value: {self.value}, children: {self.children}, properties: {self.properties})"

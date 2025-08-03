@@ -9,7 +9,7 @@ class TestHTMLNode(unittest.TestCase):
         node = HTMLNode("p", "some paragraph text")
         
         # Assert
-        self.assertIn("TAG: p", str(node), f'ERROR: Unable to find tag "{node.tag}" in node "{str(node)}"')
+        self.assertIn("tag: p", str(node), f'ERROR: Unable to find tag "{node.tag}" in node "{str(node)}"')
         self.assertIn("some paragraph text", str(node), f'ERROR: Unexpected node parameters: {str(node)}')
 
     def test_htmlnode_properties(self):
@@ -31,8 +31,8 @@ class TestHTMLNode(unittest.TestCase):
         parent = HTMLNode(tag="div", children=child, properties={"class": "directory"})
         
         # Assert
-        self.assertIn("TAG: div", str(parent), f'ERROR: Parent node tag "{parent.tag}" not found: NODE="{str(parent)}"')
-        self.assertIn("TAG: span", str(parent), f'ERROR: Child node tag "{child.tag}" not found in parent node "{str(parent)}"')
+        self.assertIn("tag: div", str(parent), f'ERROR: Parent node tag "{parent.tag}" not found: NODE="{str(parent)}"')
+        self.assertIn("tag: span", str(parent), f'ERROR: Child node tag "{child.tag}" not found in parent node "{str(parent)}"')
 
 if __name__ == "__main__":
     unittest.main()
