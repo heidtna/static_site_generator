@@ -1,17 +1,12 @@
 from dataclasses import dataclass
-from typing import List, Dict, Optional
+from typing import Dict, Optional
 
 from htmlnode import HTMLNode
 
 @dataclass
 class LeafNode(HTMLNode):
     def __init__(self, tag: Optional[str], value: str, properties: Dict[str,str] = None):
-        self.tag = tag
-        self.value = value
-        self.properties = properties
-
-        # TODO: Need to call parent constructor
-        #super().__init__()
+        super().__init__(tag, value, None, properties)
 
     def to_html(self):
         if not self.value:
