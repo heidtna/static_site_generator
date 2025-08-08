@@ -30,7 +30,7 @@ class HTMLNode:
         raise NotImplementedError()
     
     def props_to_html(self):
-        if not self.properties or len(self.properties) < 1:
+        if self.properties is None or len(self.properties) < 1:
             return ""
         
         output = ""
