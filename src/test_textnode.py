@@ -15,7 +15,7 @@ class TestTextNode(unittest.TestCase):
 
     def test_different_type_not_equal(self):
         node_1 = TextNode("This is a text node", TextType.BOLD)
-        node_2 = TextNode("This is a text node", TextType.ITALLIC)
+        node_2 = TextNode("This is a text node", TextType.ITALIC)
         self.assertNotEqual(node_1, node_2, f"ERROR: Nodes with different 'text_type' values should not be equal: \n\tNode 1: [{node_1}] \n\tNode 2: [{node_2}]")
 
     def test_link_equal(self):

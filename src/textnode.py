@@ -5,7 +5,7 @@ from leafnode import LeafNode
 class TextType(Enum):
     PLAIN = "plain"
     BOLD = "bold"
-    ITALLIC = "itallic"
+    ITALIC = "italic"
     CODE = "code"
     LINK = "link"
     IMAGE = "image"
@@ -27,7 +27,7 @@ class TextNode:
                 return LeafNode(None, self.text)
             case TextType.BOLD:
                 return LeafNode("b", self.text)
-            case TextType.ITALLIC:
+            case TextType.ITALIC:
                 return LeafNode("i", self.text)
             case TextType.CODE:
                 return LeafNode("code", self.text)
